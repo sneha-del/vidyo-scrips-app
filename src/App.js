@@ -1,16 +1,15 @@
 import "./App.css";
 import React from "react";
 import Homepage from "./components/Homepage";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router";
+import Watchlist from "./components/Watchlist";
 const App = () => {
   return (
     <>
-      <Router>
-        <Routes>
-          <Route path="/" exact component={Homepage} />
-        </Routes>
-      </Router>
-      <Homepage />
+      <Routes>
+        <Route path="/" exact element={<Homepage />} />
+        <Route path="/watchlist" exact element={<Watchlist />} />
+      </Routes>
     </>
   );
 };

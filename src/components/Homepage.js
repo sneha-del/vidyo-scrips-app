@@ -1,14 +1,13 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.css";
 import { FcPlus } from "react-icons/fc";
+import { Link } from "react-router-dom";
 const Homepage = () => {
   return (
     <>
-      <div>
+      <div className="Homepage">
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <a className="navbar-brand" href="#">
-            SCRIPS APP
-          </a>
+          <h1 style={{ color: "whitesmoke" }}>SCRIPS APP</h1>
           <button
             className="navbar-toggler"
             type="button"
@@ -24,11 +23,11 @@ const Homepage = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="#">
+                <Link className="nav-link" to="/watchlist">
                   Watchlist
-                  <FcPlus size="30px" style={{ marginLeft: "3px" }} />{" "}
+                  <FcPlus size="30px" style={{ marginLeft: "3px" }} />
                   <span className="sr-only"></span>
-                </a>
+                </Link>
               </li>
             </ul>
             <form className="form-inline my-2 my-lg-0">
@@ -47,6 +46,7 @@ const Homepage = () => {
             </form>
           </div>
         </nav>
+        <div className="table-stocks"></div>
       </div>
     </>
   );
